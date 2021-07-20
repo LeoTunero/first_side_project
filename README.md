@@ -2,3 +2,4 @@
 Leo has read the book, which is 'learn the git for yourself' <br>
 try to edit the README.md <br>
 Leo has uploaded the .gitignore 
+learn how to commit this README.md
