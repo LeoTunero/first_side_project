@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'post'
 ]
 
 MIDDLEWARE = [
@@ -103,11 +104,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-<< << << < HEAD
+# HEAD
 LANGUAGE_CODE = 'zh-hant'
 
 TIME_ZONE = 'Asia/Taipei'
-== == == =
 
 
 USE_I18N = True
