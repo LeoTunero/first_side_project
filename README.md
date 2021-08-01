@@ -8,3 +8,4 @@ learn how to commit this README.md
 0725 I have build the 'Post' in both admin.py & models.py
 0728 I have build the templates successfully.
 0731 I have rename this project into 'sharky'. I will write all my code in english only.
+0801 I have learned how to revised the setting.py to let the program know where the template really is.
