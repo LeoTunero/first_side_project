@@ -1,11 +1,23 @@
 # sharky
 
-Leo has read the book, which is 'learn the git for yourself' <br>
-try to edit the README.md <br>
-Leo has uploaded the .gitignore
-learn how to commit this README.md
-0722 I have push a new version to GitHub 'add superuser'
-0725 I have build the 'Post' in both admin.py & models.py
-0728 I have build the templates successfully.
-0731 I have rename this project into 'sharky'. I will write all my code in english only.
-0801 I have learned how to revised the setting.py to let the program know where the template really is.
+## Requirements
+
+Data Management System requires the following:<br>
+
+\*Python 3.8+<br>
+\*pipenv<br>
+\*Django 3.0+<br>
+
+The following packages are required:<br>
+
+\*django-environ<br>
+
+## Quick Start
+
+git clone git@github.com:LeoTunero/sharky.git<br>
+cd sharky<br>
+pip3 install pipenv<br>
+pipenv install<br>
+pipenv shell<br>
+python sharky/manage.py migrate<br>
+python sharky/manage.py runserver<br>
