@@ -2,22 +2,27 @@
 
 ## Requirements
 
-Data Management System requires the following:<br>
+Data Management System requires the following:
 
-\*Python 3.8+<br>
-\*pipenv<br>
-\*Django 3.0+<br>
+\*Python 3.8+
+\*pipenv
+\*Django 3.0+
 
-The following packages are required:<br>
+The following packages are required:
 
-\*django-environ<br>
+\*django-environ
 
 ## Quick Start
 
-git clone git@github.com:LeoTunero/sharky.git<br>
-cd sharky<br>
-pip3 install pipenv<br>
-pipenv install<br>
-pipenv shell<br>
-python sharky/manage.py migrate<br>
-python sharky/manage.py runserver<br>
+_Clone this project to local_
+git clone git@github.com:LeoTunero/sharky.git
+
+_cd to project folder and create a env._
+cd sharky
+pip3 install pipenv
+pipenv install
+
+_Run server_
+pipenv shell
+python sharky/manage.py migrate
+python sharky/manage.py runserver
