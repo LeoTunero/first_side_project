@@ -4,15 +4,15 @@
 
 Data Management System requires the following:
 
-\*Python 3.8+
+- Python 3.8+
 
-\*pipenv
+- pipenv
 
-\*Django 3.0+
+- Django 3.0+
 
 The following packages are required:
 
-\*django-environ
+- django-environ
 
 ## Quick Start
 
