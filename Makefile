@@ -1,5 +1,5 @@
 usage:
-	@echo 'make [check|push]'
+	@echo 'make [check|test|push]'
 
 check:
 	safety check
@@ -9,6 +9,9 @@ check:
 
 test: check
 	python sharky/manage.py test sharky
+
+build:
+	pipenv lock -r > requirements.txt
 
 push: test
 	git push
