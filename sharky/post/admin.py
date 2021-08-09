@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import Post
-# Register your models here.
+
+from post.models import Post
 
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
+
     list_display = ('id', 'title', 'content')
     search_fields = ('title', 'content')
