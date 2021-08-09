@@ -1,6 +1,30 @@
-# first_side_project
-Leo has read the book, which is 'learn the git for yourself' <br>
-try to edit the README.md <br>
-Leo has uploaded the .gitignore 
-learn how to commit this README.md
-0722 I have push a new version to GitHub 'add superuser'
+# sharky
+
+## Requirements
+
+Data Management System requires the following:
+
+- Python 3.8+
+- pipenv
+- Django 3.0+
+
+The following packages are required:
+
+- django-environ
+
+## Quick Start
+
+```bash
+# Clone this project to local
+git clone https://github.com/LeoTunero/sharky.git
+
+# cd to project folder and create a env.
+cd sharky
+pip3 install pipenv
+pipenv install
+
+# Run server
+pipenv shell
+python sharky/manage.py migrate
+python sharky/manage.py runserver
+```
