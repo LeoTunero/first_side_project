@@ -9,6 +9,9 @@ django = "*"
 [dev-packages]
 pylint = "*"
 autopep8 = "*"
+safety = "*"
+bandit = "*"
+pylint-django = "*"
 
 [requires]
 python_version = "3.8"
