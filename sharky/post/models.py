@@ -5,7 +5,7 @@ class Post(models.Model):
 
     class Meta:
         verbose_name = 'Essay'
-        verbose_name_plural = 'Essay'
+        verbose_name_plural = 'Essays'
 
     title = models.CharField(max_length=20)
     content = models.CharField(max_length=200)
