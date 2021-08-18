@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <title>Please choise your model of car</title>
+</head>
+<body>
+<form enctype="multipart/form-data" action="{% url 'choise_car_brand' %}" method="post">
+    {% csrf_token %}
+   Brand of car：<select name="car" id="car_brand">
+    <option value ="請選擇">choise</option>
+    {% for car_brand in car_brand %}
+        <option value ={{ car.car_brand }}>{{ car.car_brand }}</option>
+    {% endfor %}
+</select></br>
+</br>
+Model of car：<select name="car" id="car_model">
+
+</select>
+</br>
+</br>
+
+   <input type="submit" value="Submit" />
+    </br>
+
+    </br>
+    <h4 style="color: red"><b>{{ login_err }}</b></h4>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script language="JavaScript">
+    $("#systemname").change(function() {
+      var car_brand = $(this).val();
+{#alert("welcome");#}
+      $.ajax({
+        url: '/choise_car_brand/',
+
+          data:{"car_model":$(this).val()},
+     type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            var content='';
+            $.each(data, function(i, item){
+                  content+='<option value='+item.car_brand+'>'+item.car_brand+'</option>'
+                });
+            $('#hostnames').html(content)
+        },
+
+      });
+    });
+
+
+</script>
+</form>
+</body>
+</html>
