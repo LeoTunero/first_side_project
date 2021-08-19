@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PostListView.as_view()),
     path('<pk>', PostDetailView.as_view()),
-    path('', carListView.choise_car_brand, name='choise_car_brand'),
-    path('', carDetaView.get_car_moder, name='get_car_model')
+    path('', carListView.choise_car_brand, name='cars'),
+    path('', carDetaView.get_car_model, name='cars')
 
 ]
