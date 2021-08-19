@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import Post
+from .models import car
 import django
 import models
-import pwden
 from django.http import JsonResponse
 # Create your views here.
 
@@ -16,6 +16,18 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = 'post_detail.html'
+
+
+class carListView(ListView):
+    model = car
+    template_name = car_list.html
+    context_object_name = 'cars'
+
+
+class carDetailView(DetailView):
+    model = car
+    template_name = car_detail.html
+    context_object_name = 'cars'
 
 
 def choise_car_brand(request):

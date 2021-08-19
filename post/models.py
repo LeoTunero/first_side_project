@@ -16,9 +16,12 @@ class Post(models.Model):
 
 class car(models.Model):
     class Meta:
-        db_table = 'car'
+        db_table = 'car.csv'
     id = models.IntegerField(primary_key=True)
     car_brand = models.CharField(max_length=20, default='Honda')
     car_model = models.TextField(default='EK9')
     last_modify_date = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.car_brand
