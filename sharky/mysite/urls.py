@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from post.views import PostListView, PostDetailView
+from car.views import choise_car_brand, pick_up_car_model
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PostListView.as_view()),
     path('<pk>', PostDetailView.as_view()),
-    # path('', carListView.choise_car_brand, name='cars'),
-    # path('', carDetaView.get_car_model, name='cars')
+    path('', carListView.choise_car_brand, name='car'),
+    path('<pk>', carDetailView.get_car_model, name='car')
 
 ]
