@@ -1,3 +1,9 @@
 from django.contrib import admin
+from rest_framework.renderers import AdminRenderer
 
-# Register your models here.
+from .models import Car
+
+
+@admin.site.register(Car)
+class CarAdmin(admin.ModelAdmin):
+    list_display = ('id', 'car_brand', 'car_model')

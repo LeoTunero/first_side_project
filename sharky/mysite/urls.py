@@ -13,13 +13,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from car.views import CarViewSet
+from django import urls
 from django.contrib import admin
 from django.urls import path
+# from django.conf.urls import url, include
+from rest_framework import routers
 
+from rest_framework.routers import DefaultRouter
+
+from car import views
 from post.views import PostDetailView, PostListView
+
+router = DefaultRouter()
+router.register('car', views.CarViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PostListView.as_view()),
-    path('<int:pk>', PostDetailView.as_view())
+    path('<int:pk>', PostDetailView.as_view()),
+    # Q:what the difference between url & path
+    # A:there is a version 2.0 of django
+    # so use path, do not use url anymore
+    #path(url, view, name=None)
+    path('', CarViewSet.as_view({'get': 'list'}))
 ]

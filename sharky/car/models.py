@@ -7,3 +7,6 @@ class Car(models.Model):
 
     class Meta:
         db_table = 'car'
+
+    def __str__(self):
+        return self.car_model
