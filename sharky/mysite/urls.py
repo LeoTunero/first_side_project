@@ -16,7 +16,7 @@ Including another URLconf
 from car.views import CarViewSet
 from django import urls
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 # from django.conf.urls import url, include
 from rest_framework import routers
 
@@ -29,6 +29,9 @@ router = DefaultRouter()
 router.register('car', views.CarViewSet)
 
 urlpatterns = [
+    # The path() function is passed four arguments,
+    # two required: route and view,
+    # and two optional: kwargs, and name.
     path('admin/', admin.site.urls),
     path('', PostListView.as_view()),
     path('<int:pk>', PostDetailView.as_view()),
@@ -36,5 +39,5 @@ urlpatterns = [
     # A:there is a version 2.0 of django
     # so use path, do not use url anymore
     #path(url, view, name=None)
-    path('', CarViewSet.as_view({'get': 'list'}))
+    path('car/', include('car.urls')),
 ]
