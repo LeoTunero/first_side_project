@@ -1,12 +1,13 @@
 from django.db import models
+from django.contrib import admin
 
 
 class Car(models.Model):
-    car_brand = models.TextField()
-    car_model = models.TextField()
+    brand = models.TextField(default='Honda')
+    model = models.TextField(default='EK9')
 
     class Meta:
         db_table = 'car'
 
     def __str__(self):
-        return self.car_model
+        return self.model
